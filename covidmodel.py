@@ -217,6 +217,6 @@ content='Model accuracy is : 82.55'
 mail=smtplib.SMTP('smtp.gmail.com',587)
 mail.ehlo()
 mail.starttls()
-mail.login('physicsisever@gmail.com','wqdrdrptnbhlxjwm')
-mail.sendmail('physicsisever@gmail.com','princekrksingh@gmail.com',content)
+mail.login('your@gmail.com','yourpassword')
+mail.sendmail('your@gmail.com','receiver@gmail.com',content)
 mail.close()
