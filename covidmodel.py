@@ -212,30 +212,11 @@ plt.show()
 # In[25]:
 
 
-from keras.models import load_model
-
-cnn.save('myCovid_model.h5')  
-
-
-# In[26]:
-
-
-from keras import backend as K
-# This line must be executed before loading Keras model.
-K.set_learning_phase(0)
-
-
-# In[27]:
-
-
-from keras.models import load_model
-model = load_model('myCovid_model.h5')
-print(model.outputs)
-print(model.inputs)
-
-
-# In[ ]:
-
-
-cnn_model.predict("")
-
+import smtplib
+content='Model accuracy is : 82.55'
+mail=smtplib.SMTP('smtp.gmail.com',587)
+mail.ehlo()
+mail.starttls()
+mail.login('physicsisever@gmail.com','wqdrdrptnbhlxjwm')
+mail.sendmail('physicsisever@gmail.com','princekrksingh@gmail.com',content)
+mail.close()
